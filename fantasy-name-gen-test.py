@@ -1,5 +1,3 @@
-import fantasynames as names
-
 import random
 
 prefixes = ["Ara", "Ari", "Atha", "Auri", "Azur", "Bael", "Calen", "Cele", "Ceru", "Ciri", "Dara", "Dari", "Dro",
@@ -24,14 +22,43 @@ midixes = ["ae", "ai", "al", "an", "ar", "as", "ath", "ax", "ea", "ei", "el", "e
            "me", "mi", "mo", "mu", "na", "ne", "ni", "no", "nu", "oa", "oe", "oi", "oo", "ou", "pa", "pe", "pi", "po",
            "pu", "ra", "re", "ri", "ro", "ru"]
 
+lsprefixes = ["Black", "Bright", "Dark", "Deep", "Eagle", "East", "Elm", "Fair", "Far", "Fire", "Flame", "Forest",
+              "Frost", "Gold", "Gray", "Green", "Grim", "Hawk", "Hazel", "High", "Iron", "Jade", "Lake", "Light",
+              "Lion", "Long", "Low", "Maple", "Meadow", "Mist", "Moon", "Mountain", "Night", "North", "Oak", "Old",
+              "Pale", "Pine", "Rain", "Red", "River", "Rock", "Rose", "Rune", "Sea", "Shadow", "Sharp", "Short",
+              "Silent", "Silver", "Sky", "Snow", "South", "Spring", "Star", "Stone", "Storm", "Strong", "Swift", "Tall",
+              "Thorn", "Thunder", "Timber", "True", "West", "Whisper", "White", "Wild", "Willow", "Wind", "Winter",
+              "Wise", "Wood", "Young", "Yew", "Amber", "Ancient", "Ashen", "Autumn", "Blaze", "Boulder", "Crimson",
+              "Crystal", "Dawn", "Dream", "Dusk", "Ember", "Endless", "Falcon", "Flower", "Gentle", "Glacier",
+              "Harvest", "Hidden", "Hollow", "Journey", "Lone", "Lost", "Midnight", "Mystic", "Noble", "Phoenix",
+              "Proud", "Quiet", "Raven", "Royal", "Sable", "Sapphire", "Scarlet", 'Ash', "Black", "Blaze", "Blue",
+              "Bolt", "Brass", "Bronze", "Copper", "Crimson", "Crystal", "Diamond", "Dragon", "Emerald", "Fire",
+              "Flame", "Frost", "Garnet", "Gold", "Green", "Heart", "Ice", "Iron", "Jade", "Lava", "Lightning", "Magma",
+              "Metal", "Moon", "Night", "Obsidian", "Onyx", "Opal", "Phoenix", "Platinum", "Pyro", "Red", "Ruby",
+              "Sapphire", "Scarlet", "Shadow", "Silver", "Sky", "Smoke", "Snow", "Solar", "Sonic", "Spark", "Steel",
+              "Storm", "Sun", "Thorn", "Thunder", "Topaz", "Turquoise", "Twilight", "Vapor"]
+
+
+lssuffixes = ["arrow", "bane", "beam", "blade", "born", "breaker", "brew", "brook", "caller", "claw", "crest", "dancer",
+              "dawn", "dream", "dust", "eye", "fall", "fang", "feather", "fire", "flare", "flower", "foot", "force",
+              "fury", "gaze", "glade", "glimmer", "glow", "guard", "hammer", "hand", "heart", "hunter", "jaw", "keeper",
+              "knight", "leaf", "light", "maker", "moon", "mourner", "peak", "rage", "rain", "rider", "river", "rock",
+              "runner", "scar", "shade", "shadow", "shard", "shield", "shout", "singer", "sky", "slayer", "smoke",
+              "song", "spear", "spell", "spike", "spring", "star", "steel", "stone", "storm", "stride", "strike", "sun",
+              "sworn", "talon", "thorn", "thunder", "tide", "tracker", "trail", "vale", "walker", "ward", "watcher",
+              "water", "weaver", "whisper", "wind", "wing", "winter", "wise", "witch", "wolf"]
+
+
 syllable = random.randint(2, 4)
-name = "[test]"
+firstname = "[firstname]"
 if syllable == 2:
-    name = random.choice(prefixes) + random.choice(midixes)
+    firstname = random.choice(prefixes) + random.choice(midixes)
 elif syllable == 3:
-    name = random.choice(prefixes) + random.choice(midixes) + random.choice(suffixes)
+    firstname = random.choice(prefixes) + random.choice(midixes) + random.choice(suffixes)
 elif syllable == 4:
-    name = random.choice(prefixes) + random.choice(midixes) + random.choice(midixes) + random.choice(suffixes)
+    firstname = random.choice(prefixes) + random.choice(midixes) + random.choice(midixes) + random.choice(suffixes)
+
+lastname = random.choice(lsprefixes) + random.choice(lssuffixes)
 
 print(syllable)
-print(name)
+print(firstname, lastname)
